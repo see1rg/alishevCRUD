@@ -14,7 +14,7 @@ import javax.validation.Valid;
 @RequestMapping("/people")
 public class PeopleController {
 
-    private final PersonDAO personDAO;
+    private PersonDAO personDAO;
 
     @Autowired
     public PeopleController(PersonDAO personDAO) {
