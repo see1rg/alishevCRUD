@@ -6,18 +6,14 @@
 </head>
 <body>
 <form th:method="POST" th:action="@{/people}" th:object="${person}">
-  <label for="name"> Enter name:</label>
-  <input type="text" th:field="*{name}" id="name">
-  <div style="color:red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name error</div>
+  <label for="fullName"> Enter fullName:</label>
+  <input type="text" th:field="*{fullName}" id="fullName">
+  <div style="color:red" th:if="${#fields.hasErrors('fullName')}" th:errors="*{fullName}">FullName error</div>
   <br/>
-  <label for="age"> Enter age:</label>
-  <input type="text" th:field="*{age}" id="age">
-  <div style="color:red" th:if="${#fields.hasErrors('age')}" th:errors="*{age}">Age error</div>
-
-  <br/>
-  <label for="email"> Enter email:</label>
-  <input type="text" th:field="*{email}" id="email">
-  <div style="color:red" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email error</div>
+  <label for="yearOfBirthday"> Enter yearOfBirthday:</label>
+  <input type="text" th:field="*{yearOfBirthday}" id="yearOfBirthday">
+  <div style="color:red" th:if="${#fields.hasErrors('yearOfBirthday')}" th:errors="*{yearOfBirthday}"
+  >yearOfBirthday error</div>
 
   <br/>
   <input type="submit" value="Create!">
